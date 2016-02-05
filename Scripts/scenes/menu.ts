@@ -25,7 +25,7 @@ module scenes {
 
             // add the START button to the MENU scene
             this._startButton = new objects.Button(
-                "Start Game",
+                "StartButton",
                 config.Screen.CENTER_X, 
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._startButton);
