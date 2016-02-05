@@ -65,7 +65,7 @@ module scenes {
         
         // Restart the game
         private _restartButtonClick(event: createjs.MouseEvent){
-            
+ 
             scene = config.Scene.MENU;
             changeScene();
         }

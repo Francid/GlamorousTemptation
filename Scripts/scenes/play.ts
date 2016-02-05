@@ -5,6 +5,7 @@ module scenes {
         private _playLabel: createjs.Text;
         private _nextButton: objects.Button;
         private _backButton: objects.Button;
+        private _gameStory: story.DesicionLevel;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -17,7 +18,7 @@ module scenes {
         public start(): void {
 
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Game Scene", "60px Consolas", "#000000");
+            this._playLabel = new createjs.Text(this._gameStory.level(0), "60px Consolas", "#000000");
             this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
             this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
             this._playLabel.x = config.Screen.CENTER_X;

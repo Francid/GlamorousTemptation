@@ -23,10 +23,15 @@ var scenes;
             this._overLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._overLabel);
             // add the BACK button to the OVER scene
-            this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 60);
+            this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
+            // add the Restart button on the Screen
+            this._restartButton = new objects.Button("RestartButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
+            this.addChild(this._restartButton);
+            // Restart Button event listener
+            this._restartButton.on("click", this._restartButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -43,6 +48,7 @@ var scenes;
         // Restart the game
         Over.prototype._restartButtonClick = function (event) {
             scene = config.Scene.MENU;
+            changeScene();
         };
         return Over;
     })(objects.Scene);
