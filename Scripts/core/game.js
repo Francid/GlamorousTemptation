@@ -7,8 +7,21 @@ var currentScene;
 var scene;
 // Game Scenes
 var menu;
-var play;
-var over;
+var level1;
+var level21;
+var level22;
+var level31;
+var level32;
+var level33;
+var level34;
+var level41;
+var level42;
+var level43;
+var level44;
+var level45;
+var level46;
+var level47;
+var level48;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -55,21 +68,81 @@ function changeScene() {
             stage.removeAllChildren();
             menu = new scenes.Menu();
             currentScene = menu;
-            console.log("Starting MENU Scene");
             break;
-        case config.Scene.PLAY:
-            // show the PLAY scene
+        case config.Scene.LEVEL1:
             stage.removeAllChildren();
-            play = new scenes.Play();
-            currentScene = play;
-            console.log("Starting PLAY Scene");
+            level1 = new scenes.temptation1();
+            currentScene = level1;
             break;
-        case config.Scene.OVER:
-            // show the game OVER scene
+        case config.Scene.LEVEL21:
             stage.removeAllChildren();
-            over = new scenes.Over();
-            currentScene = over;
-            console.log("Starting OVER Scene");
+            level21 = new scenes.temptation21();
+            currentScene = level21;
+            break;
+        case config.Scene.LEVEL22:
+            stage.removeAllChildren();
+            level22 = new scenes.temptation22();
+            currentScene = level22;
+            break;
+        case config.Scene.LEVEL31:
+            stage.removeAllChildren();
+            level31 = new scenes.temptation31();
+            currentScene = level31;
+            break;
+        case config.Scene.LEVEL32:
+            stage.removeAllChildren();
+            level32 = new scenes.temptation32();
+            currentScene = level32;
+            break;
+        case config.Scene.LEVEL33:
+            stage.removeAllChildren();
+            level33 = new scenes.temptation33();
+            currentScene = level33;
+            break;
+        case config.Scene.LEVEL34:
+            stage.removeAllChildren();
+            level34 = new scenes.temptation34();
+            currentScene = level34;
+            break;
+        case config.Scene.LEVEL41:
+            stage.removeAllChildren();
+            level41 = new scenes.temptation41();
+            currentScene = level41;
+            break;
+        case config.Scene.LEVEL42:
+            stage.removeAllChildren();
+            level42 = new scenes.temptation42();
+            currentScene = level42;
+            break;
+        case config.Scene.LEVEL43:
+            stage.removeAllChildren();
+            level43 = new scenes.temptation43();
+            currentScene = level43;
+            break;
+        case config.Scene.LEVEL44:
+            stage.removeAllChildren();
+            level44 = new scenes.temptation44();
+            currentScene = level44;
+            break;
+        case config.Scene.LEVEL45:
+            stage.removeAllChildren();
+            level45 = new scenes.temptation45();
+            currentScene = level45;
+            break;
+        case config.Scene.LEVEL46:
+            stage.removeAllChildren();
+            level46 = new scenes.temptation46();
+            currentScene = level46;
+            break;
+        case config.Scene.LEVEL47:
+            stage.removeAllChildren();
+            level47 = new scenes.temptation47();
+            currentScene = level47;
+            break;
+        case config.Scene.LEVEL48:
+            stage.removeAllChildren();
+            level48 = new scenes.temptation48();
+            currentScene = level48;
             break;
     }
     console.log(currentScene.numChildren);
